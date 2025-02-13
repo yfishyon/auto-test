@@ -1,11 +1,12 @@
 name: ci
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - master
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "0 0/10 * * *"
 
 jobs:
   autogreen:
