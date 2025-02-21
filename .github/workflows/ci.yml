@@ -23,6 +23,7 @@ jobs:
           date > time
           date
           echo 1 > 1
+          git pull --rebase
           git add .
           git commit --allow-empty -m "a commit a day keeps your girlfriend stay"
           git push
