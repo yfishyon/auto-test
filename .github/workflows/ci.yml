@@ -20,6 +20,8 @@ jobs:
           git config --local user.email qq1320755258@gmail.com
           git config --local user.name nofemboy
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          date > date.log
+          git add .
           git pull --rebase
           git commit --allow-empty -m "a commit a day keeps your girlfriend stay"
           git push
