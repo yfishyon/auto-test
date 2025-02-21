@@ -1,0 +1,27 @@
+name: push
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+  schedule:
+    - cron: "* * * * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+ 
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+ 
+    - name: Make changes
+      run: echo "Some changes" >> changes.txt
+ 
+    - name: Commit changes
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Apply auto-commit
+        file_pattern: changes.txt
