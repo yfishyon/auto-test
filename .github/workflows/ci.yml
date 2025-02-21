@@ -21,7 +21,7 @@ jobs:
           git config --local user.name nofemboy
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           date > date.log
+          echo 1 > 1
           git add .
-          git pull --rebase
           git commit --allow-empty -m "a commit a day keeps your girlfriend stay"
           git push
