@@ -17,7 +17,7 @@ jobs:
 
       - name: Auto green
         run: |
-          git config --local user.email qq1320755258@gmail.com
+          git config --local user.email 123623739+yfishyon@users.noreply.github.com
           git config --local user.name nofemboy
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           date > time
